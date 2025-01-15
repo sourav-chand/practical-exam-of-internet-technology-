@@ -1,0 +1,117 @@
+<!-- 3. Design a form with the following inputs:
+• Text field, password field, checkbox, radio button, and a submit button.
+• Add labels for all inputs and use the name attribute.
+• Add form validation using attributes like required, maxlength, and pattern.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form with Validation</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 500px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+      .form-group {
+        margin-bottom: 1rem;
+      }
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+      }
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+      .radio-group {
+        margin: 0.5rem 0;
+      }
+      .radio-group label,
+      .checkbox-group label {
+        display: inline;
+        font-weight: normal;
+      }
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+      .error {
+        color: red;
+        font-size: 0.8rem;
+        margin-top: 0.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Registration Form</h2>
+    <form action="/submit" method="POST">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          required
+          maxlength="20"
+          pattern="[A-Za-z0-9]+"
+          title="Username can only contain letters and numbers"
+          placeholder="Enter username"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          required
+          minlength="8"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          title="Must contain at least one number, one uppercase and lowercase letter, and at least 8 characters"
+          placeholder="Enter password"
+        />
+      </div>
+
+      <div class="form-group checkbox-group">
+        <input type="checkbox" id="terms" name="terms" required />
+        <label for="terms">I agree to the terms and conditions</label>
+      </div>
+
+      <div class="form-group">
+        <label>Preferred Contact Method:</label>
+        <div class="radio-group">
+          <input
+            type="radio"
+            id="email"
+            name="contact"
+            value="email"
+            required
+          />
+          <label for="email">Email</label>
+        </div>
+        <div class="radio-group">
+          <input type="radio" id="phone" name="contact" value="phone" />
+          <label for="phone">Phone</label>
+        </div>
+      </div>
+
+      <input type="submit" value="Register" />
+    </form>
+  </body>
+</html>
