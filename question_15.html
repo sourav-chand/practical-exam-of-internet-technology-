@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prime Number & Day Checker</title>
+    
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Prime Number Checker</h2>
+        <input type="number" id="primeInput" placeholder="Enter a number">
+        <button onclick="checkPrime()">Check Prime</button>
+        <div id="primeResult" class="result"></div>
+
+        <h2>Day of Week</h2>
+        <input type="number" id="dayInput" placeholder="Enter a number (1-7)">
+        <button onclick="checkDay()">Check Day</button>
+        <div id="dayResult" class="result"></div>
+    </div>
+
+    <script>
+        function checkPrime() {
+            const num = parseInt(document.getElementById('primeInput').value);
+            let isPrime = true;
+
+            if (num <= 1) {
+                isPrime = false;
+            } else {
+                for (let i = 2; i <= Math.sqrt(num); i++) {
+                    if (num % i === 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+            }
+
+            document.getElementById('primeResult').textContent = 
+                isPrime ? `${num} is a prime number` : `${num} is not a prime number`;
+        }
+
+        function checkDay() {
+            const day = parseInt(document.getElementById('dayInput').value);
+            let dayName;
+
+            switch (day) {
+                case 1:
+                    dayName = "Sunday";
+                    break;
+                case 2:
+                    dayName = "Monday";
+                    break;
+                case 3:
+                    dayName = "Tuesday";
+                    break;
+                case 4:
+                    dayName = "Wednesday";
+                    break;
+                case 5:
+                    dayName = "Thursday";
+                    break;
+                case 6:
+                    dayName = "Friday";
+                    break;
+                case 7:
+                    dayName = "Saturday";
+                    break;
+                default:
+                    dayName = "Invalid day number (please enter 1-7)";
+            }
+
+            document.getElementById('dayResult').textContent = dayName;
+        }
+    </script>
+</body>
+</html></div>

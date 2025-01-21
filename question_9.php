@@ -1,3 +1,8 @@
+<!-- 9. Write a PHP script to:
+• Create a file and write some text into it.
+• Read the contents of the file and display it on the browser.
+• Append additional text to the same file. -->
+
 <!DOCTYPE html>
 <html>
 <head>

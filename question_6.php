@@ -4,30 +4,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multiplication Table</title>
-    <style>
-        table {
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-
-        th,
-        td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-
-        form {
-            margin: 20px 0;
-        }
-    </style>
+   
 </head>
 
 <body>

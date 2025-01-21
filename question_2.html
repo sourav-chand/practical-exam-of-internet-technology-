@@ -4,61 +4,7 @@ and <article>.-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Semantic Layout Example</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-      }
-      header {
-        background-color: #333;
-        color: white;
-        padding: 1rem;
-        text-align: center;
-      }
-      nav {
-        background-color: #f4f4f4;
-        padding: 1rem;
-      }
-      nav ul {
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-      }
-      nav a {
-        color: #333;
-        text-decoration: none;
-      }
-      section {
-        max-width: 1200px;
-        margin: 2rem auto;
-        padding: 0 1rem;
-      }
-      article {
-        background-color: #fff;
-        padding: 1rem;
-        margin-bottom: 1rem;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-      }
-      footer {
-        background-color: #333;
-        color: white;
-        text-align: center;
-        padding: 1rem;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-      }
-    </style>
   </head>
   <body>
     <header>
@@ -66,11 +12,9 @@ and <article>.-->
     </header>
 
     <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
 
     <section>
@@ -80,14 +24,6 @@ and <article>.-->
         <p>
           This is the content of the first article. It demonstrates the use of
           the article tag within a section.
-        </p>
-      </article>
-
-      <article>
-        <h3>Article Title 2</h3>
-        <p>
-          This is the content of the second article. Each article represents a
-          self-contained piece of content.
         </p>
       </article>
     </section>
